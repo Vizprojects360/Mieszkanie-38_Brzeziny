@@ -1860,3 +1860,20 @@ body.fullscreen-enabled #titleBar {
     display: none !important;
   }
 }
+
+/* ===== NAPRAWA UCIEKAJĄCYCH HOTSPOTÓW ===== */
+
+.no-touch .link-hotspot:hover {
+  transform: none !important;
+}
+
+.no-touch .link-hotspot:hover .link-hotspot-icon {
+  transform: scale(1.08) !important;
+}
+
+.link-hotspot-icon {
+  transition:
+    transform 0.22s ease,
+    background 0.22s ease,
+    box-shadow 0.22s ease !important;
+}
