@@ -1,36 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Mieszkanie 38m2 - Brzeziny</title>
+<title>Mieszkanie 38 m² - Brzeziny</title>
 <meta charset="utf-8">
 <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
 <style> @-ms-viewport { width: device-width; } </style>
 <link rel="stylesheet" href="vendor/reset.min.css">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=1">
 </head>
 
-<script>
-document.getElementById("startTour").addEventListener("click", function() {
-
-  document.getElementById("splashScreen").style.opacity = "0";
-
-  setTimeout(function() {
-    document.getElementById("splashScreen").style.display = "none";
-  }, 350);
-
-});
-</script>
-
-
-
-
-  
 <body class="multiple-scenes ">
 
-
-  
-
-  <div id="splashScreen">
+<!-- EKRAN STARTOWY -->
+<div id="splashScreen">
   <div class="splashCard">
 
     <p class="eyebrow">Wirtualna prezentacja nieruchomości</p>
@@ -52,15 +34,11 @@ document.getElementById("startTour").addEventListener("click", function() {
 
     </div>
 
-    <button id="startTour">Rozpocznij spacer</button>
+    <button id="startTour" type="button">Rozpocznij spacer</button>
 
   </div>
 </div>
 
-
-
-
-  
 <div id="pano"></div>
 
 <div id="sceneList">
@@ -119,28 +97,58 @@ document.getElementById("startTour").addEventListener("click", function() {
 <a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
   <img class="icon" src="img/up.png">
 </a>
+
 <a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
   <img class="icon" src="img/down.png">
 </a>
+
 <a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
   <img class="icon" src="img/left.png">
 </a>
+
 <a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
   <img class="icon" src="img/right.png">
 </a>
+
 <a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
   <img class="icon" src="img/plus.png">
 </a>
+
 <a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
   <img class="icon" src="img/minus.png">
 </a>
 
-<script src="vendor/screenfull.min.js" ></script>
-<script src="vendor/bowser.min.js" ></script>
-<script src="vendor/marzipano.js" ></script>
+<!-- STOPKA VIZPROJECTS -->
+<div id="vizFooter">
+  <a href="https://vizprojects.pl/Wirtualne-spacery-3D.html" target="_blank" rel="noopener noreferrer">
+    Spacery 360° by Vizprojects
+  </a>
+</div>
+
+<script src="vendor/screenfull.min.js"></script>
+<script src="vendor/bowser.min.js"></script>
+<script src="vendor/marzipano.js"></script>
 
 <script src="data.js"></script>
 <script src="index.js"></script>
+
+<!-- SKRYPT EKRANU STARTOWEGO -->
+<script>
+window.addEventListener("load", function() {
+  var startButton = document.getElementById("startTour");
+  var splashScreen = document.getElementById("splashScreen");
+
+  if (startButton && splashScreen) {
+    startButton.addEventListener("click", function() {
+      splashScreen.style.opacity = "0";
+
+      setTimeout(function() {
+        splashScreen.style.display = "none";
+      }, 350);
+    });
+  }
+});
+</script>
 
 </body>
 </html>
