@@ -1700,29 +1700,6 @@ body.fullscreen-enabled #titleBar {
 }
 
 
-/* INFO HOTSPOTY — DELIKATNIEJSZE */
-
-.info-hotspot .info-hotspot-header {
-  background: rgba(18,18,18,0.60) !important;
-
-  backdrop-filter: blur(18px) saturate(140%) !important;
-  -webkit-backdrop-filter: blur(18px) saturate(140%) !important;
-
-  border: 1px solid rgba(255,255,255,0.10) !important;
-
-  box-shadow: 0 12px 35px rgba(0,0,0,0.22) !important;
-}
-
-.info-hotspot .info-hotspot-text,
-.info-hotspot-modal .info-hotspot-text {
-  background: rgba(18,18,18,0.76) !important;
-
-  backdrop-filter: blur(18px) saturate(140%) !important;
-  -webkit-backdrop-filter: blur(18px) saturate(140%) !important;
-
-  border: 1px solid rgba(255,255,255,0.10) !important;
-}
-
 
 /* STOPKA — MNIEJ INWAZYJNA */
 
@@ -1861,19 +1838,3 @@ body.fullscreen-enabled #titleBar {
   }
 }
 
-/* ===== NAPRAWA UCIEKAJĄCYCH HOTSPOTÓW ===== */
-
-.no-touch .link-hotspot:hover {
-  transform: none !important;
-}
-
-.no-touch .link-hotspot:hover .link-hotspot-icon {
-  transform: scale(1.08) !important;
-}
-
-.link-hotspot-icon {
-  transition:
-    transform 0.22s ease,
-    background 0.22s ease,
-    box-shadow 0.22s ease !important;
-}
