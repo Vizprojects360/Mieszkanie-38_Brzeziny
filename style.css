@@ -1311,6 +1311,7 @@ body.fullscreen-enabled #titleBar {
 
 /* =========================================================
    VIZPROJECTS — PREMIUM TOUR UI OVERRIDE
+   BEZ ZMIAN W HOTSPOTACH
    WKLEJ NA SAM KONIEC STYLE.CSS
    ========================================================= */
 
@@ -1595,112 +1596,6 @@ body.fullscreen-enabled #titleBar {
 }
 
 
-/* HOTSPOTY — PREMIUM */
-
-.link-hotspot {
-  width: 48px !important;
-  height: 48px !important;
-
-  margin-left: -24px !important;
-  margin-top: -24px !important;
-
-  opacity: 1 !important;
-
-  transition:
-    transform 0.22s ease,
-    opacity 0.22s ease !important;
-}
-
-.link-hotspot::before {
-  content: "";
-  position: absolute;
-
-  inset: -7px;
-
-  border-radius: 50%;
-
-  border: 1px solid rgba(255,255,255,0.58);
-
-  animation: vizPulse 2.2s ease-out infinite;
-
-  pointer-events: none;
-}
-
-.link-hotspot-icon {
-  width: 48px !important;
-  height: 48px !important;
-
-  padding: 10px !important;
-
-  border-radius: 999px !important;
-
-  background: rgba(255,255,255,0.90) !important;
-
-  backdrop-filter: blur(16px) saturate(140%) !important;
-  -webkit-backdrop-filter: blur(16px) saturate(140%) !important;
-
-  border: 1px solid rgba(255,255,255,0.65) !important;
-
-  box-shadow:
-    0 12px 35px rgba(0,0,0,0.28),
-    inset 0 1px 0 rgba(255,255,255,0.60) !important;
-
-  cursor: pointer !important;
-}
-
-.no-touch .link-hotspot:hover {
-  transform: scale(1.08) !important;
-}
-
-@keyframes vizPulse {
-  0% {
-    opacity: 0.65;
-    transform: scale(0.82);
-  }
-
-  70% {
-    opacity: 0;
-    transform: scale(1.45);
-  }
-
-  100% {
-    opacity: 0;
-    transform: scale(1.45);
-  }
-}
-
-
-/* TOOLTIP HOTSPOTÓW */
-
-.link-hotspot-tooltip {
-  top: 8px !important;
-  left: 100% !important;
-
-  margin-left: 10px !important;
-
-  max-width: 260px !important;
-
-  padding: 9px 12px !important;
-
-  border-radius: 999px !important;
-
-  background: rgba(18,18,18,0.62) !important;
-
-  backdrop-filter: blur(18px) saturate(140%) !important;
-  -webkit-backdrop-filter: blur(18px) saturate(140%) !important;
-
-  border: 1px solid rgba(255,255,255,0.10) !important;
-
-  color: rgba(255,255,255,0.92) !important;
-
-  font-size: 14px !important;
-  font-weight: 700 !important;
-
-  box-shadow: 0 12px 35px rgba(0,0,0,0.24) !important;
-}
-
-
-
 /* STOPKA — MNIEJ INWAZYJNA */
 
 #vizFooter {
@@ -1816,25 +1711,7 @@ body.fullscreen-enabled #titleBar {
     font-size: 13px !important;
   }
 
-  .link-hotspot {
-    width: 46px !important;
-    height: 46px !important;
-
-    margin-left: -23px !important;
-    margin-top: -23px !important;
-  }
-
-  .link-hotspot-icon {
-    width: 46px !important;
-    height: 46px !important;
-  }
-
-  .link-hotspot-tooltip {
-    display: none !important;
-  }
-
   #vizFooter {
     display: none !important;
   }
 }
-
