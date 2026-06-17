@@ -1306,3 +1306,557 @@ body.fullscreen-enabled #titleBar {
     right: 68px !important;
   }
 }
+
+
+
+/* =========================================================
+   VIZPROJECTS — PREMIUM TOUR UI OVERRIDE
+   WKLEJ NA SAM KONIEC STYLE.CSS
+   ========================================================= */
+
+
+/* SUBTELNE GRADIENTY UI */
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  z-index: 15000;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.35),
+    rgba(0,0,0,0)
+  );
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 150px;
+  z-index: 15000;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.38),
+    rgba(0,0,0,0)
+  );
+}
+
+
+/* TYTUŁ AKTUALNEGO POMIESZCZENIA */
+
+#titleBar,
+body.multiple-scenes #titleBar,
+body.fullscreen-enabled #titleBar {
+  position: fixed !important;
+  top: 18px !important;
+  left: 50% !important;
+  right: auto !important;
+
+  width: auto !important;
+  height: auto !important;
+
+  transform: translateX(-50%) !important;
+
+  z-index: 22000 !important;
+}
+
+#titleBar .sceneName {
+  width: auto !important;
+  height: auto !important;
+
+  padding: 9px 20px !important;
+
+  line-height: 1 !important;
+
+  border-radius: 999px !important;
+
+  background: rgba(18,18,18,0.50) !important;
+
+  backdrop-filter: blur(18px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(140%) !important;
+
+  border: 1px solid rgba(255,255,255,0.10) !important;
+
+  color: rgba(255,255,255,0.92) !important;
+
+  font-size: 14px !important;
+  font-weight: 700 !important;
+
+  letter-spacing: -0.01em !important;
+
+  box-shadow:
+    0 12px 35px rgba(0,0,0,0.22),
+    inset 0 1px 0 rgba(255,255,255,0.08) !important;
+}
+
+
+/* UKRYCIE HAMBURGERA — MENU JEST NA DOLE */
+
+#sceneListToggle {
+  display: none !important;
+}
+
+
+/* DOLNY PASEK POMIESZCZEŃ */
+
+#sceneList,
+.mobile #sceneList {
+  position: fixed !important;
+
+  top: auto !important;
+  left: 50% !important;
+  bottom: 26px !important;
+
+  width: auto !important;
+  max-width: calc(100vw - 56px) !important;
+  height: auto !important;
+  max-height: none !important;
+
+  padding: 7px !important;
+
+  margin: 0 !important;
+
+  transform: translateX(-50%) !important;
+
+  border-radius: 999px !important;
+
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+
+  background: rgba(18,18,18,0.48) !important;
+
+  backdrop-filter: blur(22px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(150%) !important;
+
+  border: 1px solid rgba(255,255,255,0.10) !important;
+
+  box-shadow:
+    0 18px 50px rgba(0,0,0,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.08) !important;
+
+  z-index: 22000 !important;
+
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+#sceneList::-webkit-scrollbar {
+  display: none;
+}
+
+#sceneList.enabled,
+.mobile #sceneList.enabled {
+  margin: 0 !important;
+}
+
+#sceneList .scenes,
+.mobile #sceneList .scenes {
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+
+  width: auto !important;
+  height: auto !important;
+
+  padding: 0 !important;
+
+  background: transparent !important;
+
+  white-space: nowrap !important;
+}
+
+#sceneList .scene,
+.mobile #sceneList .scene {
+  display: block !important;
+
+  width: auto !important;
+  height: auto !important;
+
+  margin: 0 !important;
+
+  border-radius: 999px !important;
+
+  background: transparent !important;
+
+  transition:
+    background 0.22s ease,
+    color 0.22s ease,
+    transform 0.22s ease !important;
+}
+
+#sceneList .scene .text,
+.mobile #sceneList .scene .text {
+  display: block !important;
+
+  width: auto !important;
+  height: auto !important;
+
+  padding: 10px 16px !important;
+
+  line-height: 1 !important;
+
+  color: rgba(255,255,255,0.68) !important;
+
+  font-size: 14px !important;
+  font-weight: 700 !important;
+
+  letter-spacing: -0.01em !important;
+
+  overflow: visible !important;
+  text-overflow: unset !important;
+  white-space: nowrap !important;
+}
+
+.no-touch #sceneList .scene:hover {
+  background: rgba(255,255,255,0.12) !important;
+  transform: translateY(-1px) !important;
+}
+
+#sceneList .scene.current {
+  background: rgba(255,255,255,0.92) !important;
+}
+
+#sceneList .scene.current .text {
+  color: #111 !important;
+}
+
+
+/* PRAWY GÓRNY RÓG — PRZYCISKI */
+
+#autorotateToggle,
+#fullscreenToggle {
+  position: fixed !important;
+
+  top: 18px !important;
+
+  width: 46px !important;
+  height: 46px !important;
+
+  padding: 8px !important;
+
+  border-radius: 999px !important;
+
+  background: rgba(18,18,18,0.50) !important;
+
+  backdrop-filter: blur(18px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(140%) !important;
+
+  border: 1px solid rgba(255,255,255,0.10) !important;
+
+  box-shadow:
+    0 12px 35px rgba(0,0,0,0.22),
+    inset 0 1px 0 rgba(255,255,255,0.08) !important;
+
+  z-index: 22001 !important;
+
+  transition:
+    transform 0.22s ease,
+    background 0.22s ease !important;
+}
+
+#autorotateToggle:hover,
+#fullscreenToggle:hover {
+  transform: translateY(-1px) !important;
+  background: rgba(18,18,18,0.66) !important;
+}
+
+#autorotateToggle {
+  right: 18px !important;
+}
+
+#fullscreenToggle {
+  right: 76px !important;
+}
+
+#autorotateToggle .icon,
+#fullscreenToggle .icon {
+  width: 30px !important;
+  height: 30px !important;
+
+  top: 8px !important;
+  right: 8px !important;
+
+  opacity: 0.92 !important;
+}
+
+
+/* UKRYCIE STRZAŁEK STEROWANIA WIDOKIEM */
+
+.viewControlButton {
+  display: none !important;
+}
+
+
+/* HOTSPOTY — PREMIUM */
+
+.link-hotspot {
+  width: 48px !important;
+  height: 48px !important;
+
+  margin-left: -24px !important;
+  margin-top: -24px !important;
+
+  opacity: 1 !important;
+
+  transition:
+    transform 0.22s ease,
+    opacity 0.22s ease !important;
+}
+
+.link-hotspot::before {
+  content: "";
+  position: absolute;
+
+  inset: -7px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255,255,255,0.58);
+
+  animation: vizPulse 2.2s ease-out infinite;
+
+  pointer-events: none;
+}
+
+.link-hotspot-icon {
+  width: 48px !important;
+  height: 48px !important;
+
+  padding: 10px !important;
+
+  border-radius: 999px !important;
+
+  background: rgba(255,255,255,0.90) !important;
+
+  backdrop-filter: blur(16px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(140%) !important;
+
+  border: 1px solid rgba(255,255,255,0.65) !important;
+
+  box-shadow:
+    0 12px 35px rgba(0,0,0,0.28),
+    inset 0 1px 0 rgba(255,255,255,0.60) !important;
+
+  cursor: pointer !important;
+}
+
+.no-touch .link-hotspot:hover {
+  transform: scale(1.08) !important;
+}
+
+@keyframes vizPulse {
+  0% {
+    opacity: 0.65;
+    transform: scale(0.82);
+  }
+
+  70% {
+    opacity: 0;
+    transform: scale(1.45);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.45);
+  }
+}
+
+
+/* TOOLTIP HOTSPOTÓW */
+
+.link-hotspot-tooltip {
+  top: 8px !important;
+  left: 100% !important;
+
+  margin-left: 10px !important;
+
+  max-width: 260px !important;
+
+  padding: 9px 12px !important;
+
+  border-radius: 999px !important;
+
+  background: rgba(18,18,18,0.62) !important;
+
+  backdrop-filter: blur(18px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(140%) !important;
+
+  border: 1px solid rgba(255,255,255,0.10) !important;
+
+  color: rgba(255,255,255,0.92) !important;
+
+  font-size: 14px !important;
+  font-weight: 700 !important;
+
+  box-shadow: 0 12px 35px rgba(0,0,0,0.24) !important;
+}
+
+
+/* INFO HOTSPOTY — DELIKATNIEJSZE */
+
+.info-hotspot .info-hotspot-header {
+  background: rgba(18,18,18,0.60) !important;
+
+  backdrop-filter: blur(18px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(140%) !important;
+
+  border: 1px solid rgba(255,255,255,0.10) !important;
+
+  box-shadow: 0 12px 35px rgba(0,0,0,0.22) !important;
+}
+
+.info-hotspot .info-hotspot-text,
+.info-hotspot-modal .info-hotspot-text {
+  background: rgba(18,18,18,0.76) !important;
+
+  backdrop-filter: blur(18px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(140%) !important;
+
+  border: 1px solid rgba(255,255,255,0.10) !important;
+}
+
+
+/* STOPKA — MNIEJ INWAZYJNA */
+
+#vizFooter {
+  position: fixed !important;
+
+  left: auto !important;
+  right: 14px !important;
+  bottom: 10px !important;
+
+  transform: none !important;
+
+  z-index: 22001 !important;
+}
+
+#vizFooter a {
+  padding: 5px 10px !important;
+
+  background: rgba(18,18,18,0.28) !important;
+
+  backdrop-filter: blur(14px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(140%) !important;
+
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 999px !important;
+
+  color: rgba(255,255,255,0.36) !important;
+
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em !important;
+
+  box-shadow: none !important;
+}
+
+#vizFooter a:hover {
+  color: rgba(255,255,255,0.78) !important;
+  background: rgba(18,18,18,0.50) !important;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+
+  body::before {
+    height: 95px;
+  }
+
+  body::after {
+    height: 145px;
+  }
+
+  #titleBar,
+  body.multiple-scenes #titleBar,
+  body.fullscreen-enabled #titleBar {
+    top: 16px !important;
+  }
+
+  #titleBar .sceneName {
+    max-width: 150px !important;
+
+    padding: 9px 16px !important;
+
+    font-size: 13px !important;
+
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+
+  #autorotateToggle,
+  #fullscreenToggle {
+    top: 14px !important;
+
+    width: 42px !important;
+    height: 42px !important;
+
+    padding: 6px !important;
+  }
+
+  #autorotateToggle {
+    right: 12px !important;
+  }
+
+  #fullscreenToggle {
+    right: 62px !important;
+  }
+
+  #autorotateToggle .icon,
+  #fullscreenToggle .icon {
+    width: 30px !important;
+    height: 30px !important;
+
+    top: 6px !important;
+    right: 6px !important;
+  }
+
+  #sceneList,
+  .mobile #sceneList {
+    bottom: 18px !important;
+
+    max-width: calc(100vw - 24px) !important;
+
+    padding: 6px !important;
+
+    border-radius: 999px !important;
+  }
+
+  #sceneList .scene .text,
+  .mobile #sceneList .scene .text {
+    padding: 10px 14px !important;
+
+    font-size: 13px !important;
+  }
+
+  .link-hotspot {
+    width: 46px !important;
+    height: 46px !important;
+
+    margin-left: -23px !important;
+    margin-top: -23px !important;
+  }
+
+  .link-hotspot-icon {
+    width: 46px !important;
+    height: 46px !important;
+  }
+
+  .link-hotspot-tooltip {
+    display: none !important;
+  }
+
+  #vizFooter {
+    display: none !important;
+  }
+}
