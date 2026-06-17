@@ -1715,3 +1715,69 @@ body.fullscreen-enabled #titleBar {
     display: none !important;
   }
 }
+
+
+/* =========================================================
+   LOGO W LEWYM GÓRNYM ROGU
+   ========================================================= */
+
+#tourLogo {
+  position: fixed;
+
+  top: 18px;
+  left: 18px;
+
+  z-index: 22002;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 46px;
+  height: 46px;
+
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  background: rgba(18,18,18,0.50);
+
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+
+  border: 1px solid rgba(255,255,255,0.10);
+
+  box-shadow:
+    0 12px 35px rgba(0,0,0,0.22),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+
+  pointer-events: none;
+}
+
+#tourLogo img {
+  display: block;
+
+  max-width: 130px;
+  max-height: 30px;
+
+  object-fit: contain;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+  #tourLogo {
+    top: 14px;
+    left: 12px;
+
+    height: 42px;
+
+    padding: 7px 12px;
+  }
+
+  #tourLogo img {
+    max-width: 95px;
+    max-height: 26px;
+  }
+}
